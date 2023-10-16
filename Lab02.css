@@ -64,21 +64,37 @@ of the elements on the page can help fix issues with spacing too, especially if 
 
 /* ---ELEMENT SELECTORS--- */
 
+
 html {
   font-family: Calibri, 'Trebuchet MS', sans-serif;
   background: linear-gradient(180deg, #84daf5, #89ffff, #affffa, #ffffff);
 }
+
+/*--step one- add margins--*/
+
 body {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
+/*--step 2- add drop shadow--*/
 h1 {
+  filter: drop-shadow( 2px 2px 1px #0f6a9e);
   text-align: center;
 }
+
 h2 {
   margin: 4rem auto 1rem auto;
   text-align: center;
 }
-p,
+
+/*--step 3- give front a size of 20px--*/
+p {
+  font-size: 20px;
+}
+
 li {
 }
 ol {
@@ -88,44 +104,65 @@ ol {
 ol li {
   padding: 10px 0;
 }
+
+/*--step 4 but still do not know the transparency part--*/
 img {
+  box-shadow: 2px 2px 2px 1px black;
+  margin: 1rem;
+  border-radius: 1rem;
 }
+
+/*--step 5- added rgb font color--*/
 figcaption {
   text-align: center;
   font-weight: bold;
+  color: rgb(0,58,66)
 }
+
+/*--step 6- text align center--*/
 footer {
   margin: 2rem 0 2rem 0;
+  text-align: center;
 }
 
 /* ---CUSTOM CLASS NAME SELECTORS--- */
 
 .banner-div {
-  display: flex;
+  display: flex wrap;
   justify-content: center;
 }
 #banner-long {
   max-width: 100%;
   height: auto;
 }
+
+/*--step 2.1- display none--*/
 #banner-short {
   width: 230px;
+  display: none;
 }
+
+/*--step 2.4 add justify-content--*/
 .img-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
+/*--step 2.6 add flex--*/
 .tips-div {
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
 }
+
+/*--step 2.5- gave background a color--*/
 .top-places-div {
   max-width: 800px;
   margin: 5rem auto;
   color: rgb(253, 197, 132);
   padding: 1rem 2rem;
+  background-color: rgb(0, 58, 66);
 }
 .top-places-div h2 {
   text-align: center;
@@ -141,10 +178,14 @@ footer {
   }
 }
 
+/*--step 2.3- add flex wrap and text center--*/
 @media only screen and (max-width: 1100px) {
   .tips-div {
+    flex-wrap: wrap;
+    text-align: center;
   }
 }
+/*--- step 2.2- Not sure if I did this step correct or not*/
 
 @media only screen and (max-width: 500px) {
   body {
@@ -155,14 +196,18 @@ footer {
     font-size: 16px;
   }
   .img-div img {
-    width: 230px;
+    width: 100%;
   }
   .tips-div img {
     width: 230px;
   }
   #banner-long {
+    display: none;
+
   }
   #banner-short {
+    max-width: 100%;
+  height: auto;
   }
 }
 /* ------------------------- */
